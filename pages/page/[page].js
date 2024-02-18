@@ -7,6 +7,10 @@ const Page = props => {
   const { theme } = useGlobal()
   const { siteInfo, configs } = props
   console.log('=========', configs)
+  if (!configs) {
+    console.error('configs is undefined')
+    return <></>
+  }
   const ThemeComponents = ThemeMap[theme]
   if (!siteInfo) {
     return <></>

@@ -10,6 +10,11 @@ import CONFIG from '@/config'
  */
 const NoFound = props => {
   const { theme, siteInfo } = useGlobal()
+  if (!props || !props.configs) {
+    console.error('props or configs is undefined')
+    return <></>
+  }
+
   const ThemeComponents = ThemeMap[theme]
   const meta = { title: `${props?.siteInfo?.title} | 页面找不到啦`, image: siteInfo?.pageCover }
   return <ThemeComponents.Layout404 {...props} meta={meta}/>
