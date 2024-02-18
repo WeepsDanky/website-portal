@@ -1,8 +1,8 @@
 const CONFIG = {
   DATASOURCE: process.env.DATASOURCE || 'notion', // notion, flowus
   // Important page_id！！！Duplicate Template from  https://dingliu.notion.site/NotionPortal-Template-354428ac80374a9d84a1890225578a0b
-  WEBSITE_NOTION_PAGE_ID: process.env.WEBSITE_NOTION_PAGE_ID || '5f940aa2e51049bd9b451414041c09f5',
-  LINKS_NOTION_PAGE_ID: process.env.LINKS_NOTION_PAGE_ID || '7be92035f8784e588fdfca0b264dbb2f',
+  WEBSITE_NOTION_PAGE_ID: process.env.WEBSITE_NOTION_PAGE_ID || 'b93052b0a1ab4ab9a7138a30440f3905',
+  LINKS_NOTION_PAGE_ID: process.env.LINKS_NOTION_PAGE_ID || '5aafc10ad0884280b98f7702825067a5',
   NOTION_ACCESS_TOKEN: process.env.NOTION_ACCESS_TOKEN || '', // Useful if you prefer not to make your database public
 
   NEXT_REVALIDATE_SECOND: process.env.NEXT_PUBLIC_REVALIDATE_SECOND || 120, // 更新内容缓存间隔 单位(秒)；即每个页面有一定时间的纯静态期、此期间无论多少次访问都不会抓取notion数据；调大该值有助于节省Vercel资源、同时提升访问速率，但也会使更新有延迟。
