@@ -27,8 +27,7 @@ const LinkIcon = ({ link }) => {
 }
 
 const LinkCard = ({ link, configs }) => {
-  // const url = configs.DETAIL_PAGE_ENABLED ? '/p/' + link.id : link.url || '' // TODO: 详情页
-  const url = link.url || ''
+  const url = configs.DETAIL_PAGE_ENABLED ? '/p/' + link.id : link.url || ''
 
   return (
     <Link href={url} target='_blank' className='group relative bg-white rounded-md p-5 bg-white hover:bg-gray-50' style={{ breakInside: 'avoid', boxShadow: '0 0px 6px 3px rgb(0 0 0 / 0.1), 0 0px 0px -1px rgb(0 0 0 / 0.1)' }} key={link.id}>
