@@ -5,7 +5,7 @@ const CONFIG = {
   LINKS_NOTION_PAGE_ID: process.env.LINKS_NOTION_PAGE_ID || '5aafc10ad0884280b98f7702825067a5',
   NOTION_ACCESS_TOKEN: process.env.NOTION_ACCESS_TOKEN || '', // Useful if you prefer not to make your database public
 
-  NEXT_REVALIDATE_SECOND: process.env.NEXT_PUBLIC_REVALIDATE_SECOND || 120, // 更新内容缓存间隔 单位(秒)；即每个页面有一定时间的纯静态期、此期间无论多少次访问都不会抓取notion数据；调大该值有助于节省Vercel资源、同时提升访问速率，但也会使更新有延迟。
+  NEXT_REVALIDATE_SECOND: process.env.NEXT_PUBLIC_REVALIDATE_SECOND || 60, // 更新内容缓存间隔 单位(秒)；即每个页面有一定时间的纯静态期、此期间无论多少次访问都不会抓取notion数据；调大该值有助于节省Vercel资源、同时提升访问速率，但也会使更新有延迟。
   THEME: process.env.NEXT_PUBLIC_THEME || 'plain', // 主题
   THEME_SWITCH: process.env.NEXT_PUBLIC_THEME_SWITCH || false, // 是否显示切换主题按钮
   LANG: process.env.NEXT_PUBLIC_LANG || 'zh-CN', // e.g 'zh-CN','en-US'  see /lib/lang.js for more.
