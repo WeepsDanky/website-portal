@@ -1,9 +1,9 @@
 import CONFIG from '@/config'
+
 import * as ThemeMap from '@/themes'
 import { useGlobal } from '@/lib/global'
 import { generateRobotsTxt } from '@/lib/robots.txt'
 import { getLinks, getWebsiteConfigs } from '@/lib/datasource/website'
-
 const Index = props => {
   const { theme } = useGlobal()
   const ThemeComponents = ThemeMap[theme]
@@ -31,6 +31,7 @@ export async function getStaticProps() {
     props: {
       configs,
       meta,
+
       siteInfo,
       categories: links.categories,
       links: links.links
